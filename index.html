@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Hub Centreum</title>
+    <link rel="stylesheet" href="scripts/leaflet.css"/>
+    <script src="scripts\leaflet.js" ></script>
+    <style>html, body {height: 100%;margin: 0;padding: 0;}</style>
+    </head>
+    <body>
+        <div id="myMap" style="width:100%;height:100%; background: #000000;"></div>
+        <script type="text/javascript">
+         var map = L.map('myMap', {crs: L.CRS.Simple,minZoom: 1, maxZoom:6, maxNativeZoom:6});
+         var tile = {tileSize: L.point(480, 320)};
+         L.tileLayer('{z}/{x}/{y}.png', tile).addTo(map)
+         map.setView([-151.141936, 186.25], 6);
+		 
+		 
+		 
+		//ICONS
+		var icon_cycles = L.icon({
+		iconUrl: 'https://cdn.discordapp.com/attachments/1284561296901279855/1284561297224110140/Slide1.PNG?ex=66e865ef&is=66e7146f&hm=b08a21e38f00de02c863f60e6cb3eb830efdf33b12ebd86cd24bb033d67c79f6&',
+		iconSize: [25, 50],
+		iconAnchor: [12.5, 25],
+		popupAnchor: [0, -25],
+		tooltipAnchor: [12.5, 50],
+		});
+		 
+		 //Markers
+		 var cycles_c1 = L.marker([-138.046315, 175.78125], {icon: icon_cycles}).bindPopup('<b>C1 - Lower West End – Carpark (23 bikes)</b>');
+		 var cycles_c2 = L.marker([-137.325999, 155.1875], {icon: icon_cycles}).bindPopup('<b>C2 - Lower West End – Station Exit 2 (East Square) (36 bikes)</b>');
+		 var cycles_c3 = L.marker([-129.890599, 166.390625], {icon: icon_cycles}).bindPopup('<b>C3 - Lower West End – The Verge (16 bikes)</b>');
+		 var cycles_c4 = L.marker([-169.032912, 172.9375], {icon: icon_cycles}).bindPopup('<b>C4 - West End – Parade Grounds Sloane’s (17 bikes)</b>');
+		 var cycles_c5 = L.marker([-149.159242, 163.875], {icon: icon_cycles}).bindPopup('<b>C5 - West End – The Nexus (19 bikes)</b>');
+		 var cycles_c6 = L.marker([-136.265616, 139.125], {icon: icon_cycles}).bindPopup('<b>C6 - Lower West End – Lower West End Park (South) (13 bikes)</b>');
+		 var cycles_c7 = L.marker([-133.25168, 139.125], {icon: icon_cycles}).bindPopup('<b>C7 - Lower West End – Lower West End Park (North) (14 bikes)</b>');
+		 var cycles_c8 = L.marker([-161.529264, 181.015625], {icon: icon_cycles}).bindPopup('<b>C8 - West End – Parade Grounds (North) / Parliament Visitor Centre (43 bikes)</b>');
+		 var cycles_c9 = L.marker([-179.905279, 178.265625], {icon: icon_cycles}).bindPopup('<b>C9 - West End – Parade Grounds (South) (29 bikes)</b>');
+		 var cycles_c10 = L.marker([-191.625385, 199.4375], {icon: icon_cycles}).bindPopup('<b>C10 - Capitol Island – National Library (East) (15 bikes)</b>');
+		 var cycles_c11 = L.marker([-211.488872, 211.625], {icon: icon_cycles}).bindPopup('<b>C11 - Capitol Island – Menass Boardwalk (26 bikes)</b>');
+		 var cycles_c12 = L.marker([-206.960159, 188.875], {icon: icon_cycles}).bindPopup('<b>C12 - Capitol Island – High Court / National Library (South) (11 bikes)</b>');
+		 var cycles_c13 = L.marker([-203.671901, 176.875], {icon: icon_cycles}).bindPopup('<b>C13 - Lower West Side – St. James’ Square Station (27 bikes)</b>');
+		 var cycles_c14 = L.marker([-194.625, 179.296875], {icon: icon_cycles}).bindPopup('<b>C14 - Lower West Side – Capitol Island Police Precinct (16 bikes)</b>');
+		 var cycles_c15 = L.marker([-192.391876, 174.3125], {icon: icon_cycles}).bindPopup('<b>C15 - Lower West Side – Portman Square (17 bikes)</b>');
+		 var cycles_c16 = L.marker([-193.3757, 163.28125], {icon: icon_cycles}).bindPopup('<b>C16 - Lower West Side – Jackson Square (South) (17 bikes)</b>');
+		 var cycles_c17 = L.marker([-175.687631, 157.90625], {icon: icon_cycles}).bindPopup('<b>C17 - West End – Cycle Bridge (17 bikes)</b>');
+		 var cycles_c18 = L.marker([-161.531827, 189.9375], {icon: icon_cycles}).bindPopup('<b>C18 - Capitol Island – Parliament House (North) / Presidential Palace (27 bikes)</b>');
+		 var cycles_c19 = L.marker([-239.562587, 203.375], {icon: icon_cycles}).bindPopup('<b>C19 - Capitol Island – Southend Park (41 bikes)</b>');
+		 var cycles_c20 = L.marker([-228.531477, 192.875], {icon: icon_cycles}).bindPopup('<b>C20 - Capitol Island – City Hall Station Exit 6 (41 bikes)</b>');
+		 var cycles_c21 = L.marker([-228.531477, 179.609375], {icon: icon_cycles}).bindPopup('<b>C21 - Capitol Island – City Hall Station Exit 5 (41 bikes)</b>');
+		 var cycles_c22 = L.marker([-233.655848, 173.203125], {icon: icon_cycles}).bindPopup('<b>C22 - Capitol Island – Svindler Court (9 bikes)</b>');
+		 var cycles_c23 = L.marker([-215.000814, 173.828125], {icon: icon_cycles}).bindPopup('<b>C23 - Capitol Island – City Hall Station Exit 2 (19 bikes)</b>');
+		 var cycles_c24 = L.marker([-202.9254, 167.265625], {icon: icon_cycles}).bindPopup('<b>C24 - Capitol Island – South West Church (17 bikes)</b>');
+		 var cycles_c25 = L.marker([-214.593348, 182.5], {icon: icon_cycles}).bindPopup('<b>C25 - Capitol Island – Ministry for Culture & Foreign Affairs (South) (44 bikes)</b>');
+		 
+		 //Marker Groups
+		 var mg_cycles = L.layerGroup([cycles_c1,cycles_c2, cycles_c3, cycles_c4, cycles_c5, cycles_c6, cycles_c7, cycles_c8, cycles_c9, 
+		 cycles_c10, cycles_c11, cycles_c12, cycles_c13, cycles_c14, cycles_c15, cycles_c16, cycles_c17, cycles_c18, cycles_c19, cycles_c20, 
+		 cycles_c21, cycles_c22, cycles_c23, cycles_c24, cycles_c25]);
+		 
+		 //Marker Overlay
+		 var overlays={
+		 "Centreum Cycles Docking Stations" : mg_cycles,
+			}
+		//GROUP CONTROLS
+		L.control.layers(null, overlays, 'topright').addTo(map);
+		
+		//hub Centreum Logo
+		var imageUrl = 'https://cdn.discordapp.com/attachments/1285011015762710660/1285011016647966915/Hub_Centreum_Transparent_White.png?ex=66e8b744&is=66e765c4&hm=69f7508e5c23938a70fbff385109edb5e1529130ca9987fa784a2dd11528c6f4&',
+		imageBounds = [[0, 0], [-40, 140]];
+		L.imageOverlay(imageUrl, imageBounds).addTo(map);
+		
+        </script>
+    </body>
+</html>
+        
+		

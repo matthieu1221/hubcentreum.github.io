@@ -1,0 +1,8 @@
+// FOR ADDING NEWS MARKERS
+		var marker = L.marker([0, 0], {
+		 draggable: true,
+		 }).addTo(map);
+		 marker.bindPopup('LatLng Marker').openPopup();
+		 marker.on('dragend', function(e) {
+		 marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
+		 });
