@@ -26,6 +26,13 @@
 		popupAnchor: [0, -25],
 		tooltipAnchor: [12.5, 50],
 		});
+		var icon_mff = L.icon({
+		iconUrl: 'images/img_mff.png',
+		iconSize: [25, 25],
+		iconAnchor: [12.5, 12.5],
+		popupAnchor: [0, -12.5],
+		tooltipAnchor: [12.5, 25],
+		});
 		 
 		 //Markers
 		 var cycles_c1 = L.marker([-138.046315, 175.78125], {icon: icon_cycles}).bindPopup('<b>C1 - Lower West End – Carpark (23 bikes)</b>');
@@ -54,13 +61,36 @@
 		 var cycles_c24 = L.marker([-202.9254, 167.265625], {icon: icon_cycles}).bindPopup('<b>C24 - Capitol Island – South West Church (17 bikes)</b>');
 		 var cycles_c25 = L.marker([-214.593348, 182.5], {icon: icon_cycles}).bindPopup('<b>C25 - Capitol Island – Ministry for Culture & Foreign Affairs (South) (44 bikes)</b>');
 		 
+		 var mff_103 = L.marker([-99.734629, 166.828125], {icon: icon_mff}).bindPopup('<b>103 - La Resistance - Brickhaus</b><br><b>Seats:</b> 52<br><b>Washroom:</b> No<br><i>Opened 13/11/21</i>');
+		 var mff_116 = L.marker([-136.655865, 162.4375], {icon: icon_mff}).bindPopup('<b>116 - Capitol Island - Lower West End</b><br><b>Seats:</b> 60<br><b>Washroom:</b> No<br><i>Opened 11/07/22</i>');
+		 var mff_117 = L.marker([-168.055537, 177.28125], {icon: icon_mff}).bindPopup('<b>117 - Capitol Island - Parade Grounds </b><br><b>Seats:</b> 53<br><b>Washroom:</b> No<br><i>Opened 11/07/22</i>');
+		 var mff_118 = L.marker([-194.259607, 197.0625], {icon: icon_mff}).bindPopup('<b>118 - Capitol Island - National Library</b><br><b>Seats:</b> 28<br><b>Washroom:</b> No<br><i>Opened 13/07/22</i>');
+		 var mff_121 = L.marker([-145.754007, 163.5], {icon: icon_mff}).bindPopup('<b>121 - Capitol Island - The Nexus</b><br><b>Seats:</b> 18<br><b>Washroom:</b> Yes (External)<br><i>Opened 03/08/22</i>');
+		 var mff_130 = L.marker([-194.562657, 256.125], {icon: icon_mff}).bindPopup('<b>130 - Merchants&#39 Island - Haymarket Square</b><br><b>Seats:</b> 196<br><b>Washroom:</b> No<br><i>Opened 09/08/22</i>');
+		 var mff_133 = L.marker([-191.391955, 168.25], {icon: icon_mff}).bindPopup('<b>133 - Capitol Island - Jackson Square</b><br><b>Seats:</b> 38<br><b>Washroom:</b> No<br><i>Opened 15/08/22</i>');
+		 var mff_134 = L.marker([-149.109812, 376.125], {icon: icon_mff}).bindPopup('<b>134 - Brookedge - Brookedge99 Precinct Area</b><br><b>Seats:</b> 84<br><b>Washroom:</b> No<br><i>Opened 23/08/22</i>');
+		 var mff_141 = L.marker([-214.359279, 38.125], {icon: icon_mff}).bindPopup('<b>141 - Buena Vista - Stalingrad <i>(Heritage)</i></b><br><b>Seats:</b> 66<br><b>Washroom:</b> No<br><i>Opened 12/03/23</i>');
+		 var mff_144 = L.marker([-178.31229, 312.359375], {icon: icon_mff}).bindPopup('<b>144 - Metrotown - Copperhaus</b><br><b>Seats:</b> 162<br><b>Washroom:</b> No<br><i>Opened 28/04/23</i>');
+		 var mff_145 = L.marker([-160.655673, 318.40625], {icon: icon_mff}).bindPopup('<b>145 - Metrotown - Metrotown City 2/F (Gray Zone)</b><br><b>Seats:</b> 115<br><b>Washroom:</b> Yes (External)<br><i>Opened 30/04/23</i>');
+		 var mff_146 = L.marker([-167.515406, 393.703125], {icon: icon_mff}).bindPopup('<b>146 - Brookedge - Tachbrook House</b><br><b>Seats:</b> 26<br><b>Washroom:</b> No<br><i>Opened 08/05/23</i>');
+		 var mff_147 = L.marker([-203.604774, 330.1875], {icon: icon_mff}).bindPopup('<b>147 - Metrotown - Danforth Yards</b><br><b>Seats:</b> 90<br><b>Washroom:</b> No<br><i>Opened 11/05/23</i>');
+		 var mff_148 = L.marker([-222.809666, 242.1875], {icon: icon_mff}).bindPopup('<b>148 - Merchants&#39 Island - Exchange Place</b><br><b>Seats:</b> 22<br><b>Washroom:</b> No<br><i>Opened 15/05/23</i>');
+		 var mff_150 = L.marker([-195.640345, 294.796875], {icon: icon_mff}).bindPopup('<b>150 - Metrotown - Alexandra Road Estate</b><br><b>Seats:</b> 34<br><b>Washroom:</b> Yes (External)<br><i>Opened 21/06/23</i>');
+		 var mff_169 = L.marker([-97.375805, 206.90625], {icon: icon_mff}).bindPopup('<b>169 - La Resistance - ^2view Central</b><br><b>Seats:</b> 83<br><b>Washroom:</b> Yes (External)<br><i>Opened 17/01/24</i>');
+		 var mff_175 = L.marker([-125.286306, 275.9375], {icon: icon_mff}).bindPopup('<b>175 - Merchants&#39 Island - Sarglia Station</b><br><b>Seats:</b> 15<br><b>Washroom:</b> No<br><i>Opened 05/02/24</i>');
+		 var mff_190 = L.marker([-57.687832, 255.1875], {icon: icon_mff}).bindPopup('<b>190 - La Resistance - Ardoise Station Shopping Arcade</b><br><b>Seats:</b> 38<br><b>Washroom:</b> Yes<br><i>Opened 28/07/24</i>');
+		 var mff_192 = L.marker([-98.031574, 238.875], {icon: icon_mff}).bindPopup('<b>192 - La Resistance - Bonaventure Station</b><br><b>Seats:</b> 20<br><b>Washroom:</b> Yes<br><i>Opened 25/08/24</i>');
+		 
 		 //Marker Groups
 		 var mg_cycles = L.layerGroup([cycles_c1,cycles_c2, cycles_c3, cycles_c4, cycles_c5, cycles_c6, cycles_c7, cycles_c8, cycles_c9, 
 		 cycles_c10, cycles_c11, cycles_c12, cycles_c13, cycles_c14, cycles_c15, cycles_c16, cycles_c17, cycles_c18, cycles_c19, cycles_c20, 
 		 cycles_c21, cycles_c22, cycles_c23, cycles_c24, cycles_c25]);
+		 var mg_mff = L.layerGroup([mff_103,mff_116,mff_117,mff_118,mff_121,mff_130,mff_133,mff_134,mff_141,mff_144,mff_145,mff_146,mff_147,mff_148,mff_150,
+		 mff_169,mff_175,mff_190,mff_192]);
 		 
 		 //Marker Overlay
 		 var overlays={
+		 "Matt's Fast Food" : mg_mff,
 		 "Centreum Cycles Docking Stations" : mg_cycles,
 			}
 		//GROUP CONTROLS
