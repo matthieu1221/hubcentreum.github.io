@@ -8,6 +8,7 @@
     <script src="scripts\leaflet.js" ></script>
     <style>html, body {height: 100%;margin: 0;padding: 0;}</style>
 	<link rel="shortcut icon" href="images/img_hub.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     </head>
     <body>
         <div id="myMap" style="width:100%;height:100%; background: #000000;"></div>
@@ -81,6 +82,7 @@
 		 var mff_175 = L.marker([-125.286306, 275.9375], {icon: icon_mff}).bindPopup('<b>175 - Merchants&#39 Island - Sarglia Station</b><br><b>Seats:</b> 15<br><b>Washroom:</b> No<br><i>Opened 05/02/24</i>');
 		 var mff_190 = L.marker([-57.687832, 255.1875], {icon: icon_mff}).bindPopup('<b>190 - La Resistance - Ardoise Station Shopping Arcade</b><br><b>Seats:</b> 38<br><b>Washroom:</b> Yes<br><i>Opened 28/07/24</i>');
 		 var mff_192 = L.marker([-98.031574, 238.875], {icon: icon_mff}).bindPopup('<b>192 - La Resistance - Bonaventure Station</b><br><b>Seats:</b> 20<br><b>Washroom:</b> Yes<br><i>Opened 25/08/24</i>');
+
 		 
 		 //Marker Groups
 		 var mg_cycles = L.layerGroup([cycles_c1,cycles_c2, cycles_c3, cycles_c4, cycles_c5, cycles_c6, cycles_c7, cycles_c8, cycles_c9, 
@@ -98,10 +100,27 @@
 		L.control.layers(null, overlays, 'topright').addTo(map);
 		
 		//hub Centreum Logo
-		var imageUrl = 'https://cdn.discordapp.com/attachments/1285011015762710660/1285011016647966915/Hub_Centreum_Transparent_White.png?ex=66e8b744&is=66e765c4&hm=69f7508e5c23938a70fbff385109edb5e1529130ca9987fa784a2dd11528c6f4&',
-		imageBounds = [[0, 0], [-40, 140]];
-		L.imageOverlay(imageUrl, imageBounds).addTo(map);
-		
+		L.Control.Watermark = L.Control.extend({
+			onAdd: function(map) {
+				var img = L.DomUtil.create('img');
+
+				img.src = 'images/img_watermark.png';
+				img.style.width = '300px';
+
+				return img;
+			},
+
+			onRemove: function(map) {
+        // Nothing to do here
+			}
+		});
+
+		L.control.watermark = function(opts) {
+			return new L.Control.Watermark(opts);
+			}
+
+		L.control.watermark({ position: 'bottomleft' }).addTo(map);
+
         </script>
     </body>
 </html>
