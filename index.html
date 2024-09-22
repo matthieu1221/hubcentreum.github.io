@@ -140,6 +140,11 @@
 		 var cycles_c24 = L.marker([-202.9254, 167.265625], {icon: icon_cycles}).bindPopup('<b>C24 - Capitol Island – South West Church (17 bikes)</b>');
 		 var cycles_c25 = L.marker([-214.593348, 182.5], {icon: icon_cycles}).bindPopup('<b>C25 - Capitol Island – Ministry for Culture & Foreign Affairs (South) (44 bikes)</b>');
 		 
+		 var cycles_w1 = L.marker([-108.827696, 239.421875], {icon: icon_cycles}).bindPopup('<b>W1 - Bonaventure – Drayton Building (23 bikes)</b>')
+		 var cycles_w2 = L.marker([-102.687378, 232.4375], {icon: icon_cycles}).bindPopup('<b>W2 - Bonaventure – Southern Food Truck Area (33 bikes)</b>')
+		 var cycles_w3 = L.marker([-93.55187, 231.546875], {icon: icon_cycles}).bindPopup('<b>W3 - Bonaventure – Bonaventure Station Exit 1 (South) (16 bikes)</b>')
+		 var cycles_w4 = L.marker([-93.55187, 239.75], {icon: icon_cycles}).bindPopup('<b>W4 - Bonaventure – Bonaventure Station Exit 2 (South) (21 bikes)</b>')
+		 
 		 var mff_103 = L.marker([-99.734629, 166.828125], {icon: icon_mff}).bindPopup('<b>103 - La Resistance - Brickhaus</b><br><b>Seats:</b> 52<br><b>Washroom:</b> No<br><i>Opened 13/11/21</i>');
 		 var mff_116 = L.marker([-136.655865, 162.4375], {icon: icon_mff}).bindPopup('<b>116 - Capitol Island - Lower West End</b><br><b>Seats:</b> 60<br><b>Washroom:</b> No<br><i>Opened 11/07/22</i>');
 		 var mff_117 = L.marker([-168.055537, 177.28125], {icon: icon_mff}).bindPopup('<b>117 - Capitol Island - Parade Grounds </b><br><b>Seats:</b> 53<br><b>Washroom:</b> No<br><i>Opened 11/07/22</i>');
@@ -226,7 +231,8 @@
 		 //Marker Groups
 		 var mg_cycles = L.layerGroup([cycles_c1,cycles_c2, cycles_c3, cycles_c4, cycles_c5, cycles_c6, cycles_c7, cycles_c8, cycles_c9, 
 		 cycles_c10, cycles_c11, cycles_c12, cycles_c13, cycles_c14, cycles_c15, cycles_c16, cycles_c17, cycles_c18, cycles_c19, cycles_c20, 
-		 cycles_c21, cycles_c22, cycles_c23, cycles_c24, cycles_c25]);
+		 cycles_c21, cycles_c22, cycles_c23, cycles_c24, cycles_c25,
+		 cycles_w1,cycles_w2,cycles_w3,cycles_w4]);
 		 var mg_mff = L.layerGroup([mff_103,mff_116,mff_117,mff_118,mff_121,mff_130,mff_133,mff_134,mff_141,mff_144,mff_145,mff_146,mff_147,mff_148,mff_150,
 		 mff_169,mff_175,mff_190,mff_192]);
 		 var mg_pt = L.layerGroup([lwe_1,lwe_2,lwe_3,
