@@ -112,6 +112,13 @@
 		popupAnchor: [0, -12.5],
 		tooltipAnchor: [12.5, 25],
 		});
+		var icon_ferry = L.icon({
+		iconUrl: 'images/ferry.png',
+		iconSize: [25, 25],
+		iconAnchor: [12.5, 12.5],
+		popupAnchor: [0, -12.5],
+		tooltipAnchor: [12.5, 25],
+		});
 		 
 		 //Markers
 		 var cycles_c1 = L.marker([-138.046315, 175.78125], {icon: icon_cycles}).bindPopup('<b>C1 - Lower West End – Carpark (23 bikes)</b>');
@@ -139,6 +146,8 @@
 		 var cycles_c23 = L.marker([-215.000814, 173.828125], {icon: icon_cycles}).bindPopup('<b>C23 - Capitol Island – City Hall Station Exit 2 (19 bikes)</b>');
 		 var cycles_c24 = L.marker([-202.9254, 167.265625], {icon: icon_cycles}).bindPopup('<b>C24 - Capitol Island – South West Church (17 bikes)</b>');
 		 var cycles_c25 = L.marker([-214.593348, 182.5], {icon: icon_cycles}).bindPopup('<b>C25 - Capitol Island – Ministry for Culture & Foreign Affairs (South) (44 bikes)</b>');
+		 var cycles_c26 = L.marker([-225.093173, 164.28125], {icon: icon_cycles}).bindPopup('<b>C26 - Capitol Island – Capitol Promenade (South) (22 bikes)</b>');
+		 var cycles_c27 = L.marker([-220.954866, 164.28125], {icon: icon_cycles}).bindPopup('<b>C27 - Capitol Island – Capitol Promenade (North) (22 bikes)</b>');
 		 
 		 var cycles_w1 = L.marker([-108.827696, 239.421875], {icon: icon_cycles}).bindPopup('<b>W1 - Bonaventure – Drayton Building (23 bikes)</b>')
 		 var cycles_w2 = L.marker([-102.687378, 232.4375], {icon: icon_cycles}).bindPopup('<b>W2 - Bonaventure – Southern Food Truck Area (33 bikes)</b>')
@@ -228,10 +237,16 @@
 		 var rop_2 = L.marker([-139.501828, 351.8125], {icon: icon_exit2}).bindPopup('<b>Exit 2 - Rosa Parks Station</b><br><b>Lines: </b>T4');
 		 var rop_3 = L.marker([-139.501828, 354.09375], {icon: icon_exit3}).bindPopup('<b>Exit 3 - Rosa Parks Station</b><br><b>Lines: </b>T4');
 		 
+		 var ferry_clarence = L.marker([-255.111588, 179.703125], {icon: icon_ferry}).bindPopup('<b>Clarence Island (Spawn) Pier</b><br><b>Lines: </b>F1 & F2');
+		 var ferry_expl = L.marker([-249.549027, 233.546875], {icon: icon_ferry}).bindPopup('<b>Exchange Place Ferry Terminal</b><br><b>Lines: </b>F1 & F2');
+		 var ferry_parlbridge = L.marker([-196.734489, 222.015625], {icon: icon_ferry}).bindPopup('<b>Parliament Bridge (Eastbank) Pier</b><br><b>Lines: </b>F1');
+		 var ferry_lwe = L.marker([-128.812273, 163.703125], {icon: icon_ferry}).bindPopup('<b>Lower West End Pier</b><br><b>Lines: </b>F1');
+		 var ferry_capitol = L.marker([-223.655541, 162.453125], {icon: icon_ferry}).bindPopup('<b>Capitol Promenade Pier</b><br><b>Lines: </b>F1');
+
 		 //Marker Groups
 		 var mg_cycles = L.layerGroup([cycles_c1,cycles_c2, cycles_c3, cycles_c4, cycles_c5, cycles_c6, cycles_c7, cycles_c8, cycles_c9, 
 		 cycles_c10, cycles_c11, cycles_c12, cycles_c13, cycles_c14, cycles_c15, cycles_c16, cycles_c17, cycles_c18, cycles_c19, cycles_c20, 
-		 cycles_c21, cycles_c22, cycles_c23, cycles_c24, cycles_c25,
+		 cycles_c21, cycles_c22, cycles_c23, cycles_c24, cycles_c25, cycles_c26, cycles_c27,
 		 cycles_w1,cycles_w2,cycles_w3,cycles_w4]);
 		 var mg_mff = L.layerGroup([mff_103,mff_116,mff_117,mff_118,mff_121,mff_130,mff_133,mff_134,mff_141,mff_144,mff_145,mff_146,mff_147,mff_148,mff_150,
 		 mff_169,mff_175,mff_190,mff_192]);
@@ -248,6 +263,7 @@
 		 met_1,met_2,met_3,met_4,
 		 que_1,que_2,
 		 rop_1,rop_2,rop_3,
+		 ferry_clarence, ferry_expl, ferry_parlbridge, ferry_lwe, ferry_capitol,
 		 ]);
 		 
 		 //Marker Overlay
